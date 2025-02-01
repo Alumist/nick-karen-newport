@@ -17,21 +17,20 @@ export default function Intro() {
         scrollTrigger: {
           trigger: '.relative',
           start: 'top top',
-          end: '+=50%',
+          end: '+=100%',
           pin: true,
           scrub: true,
         },
       })
       .to(img.current, {
         scale: 12,
-        duration: 1,
+        ease: 'ease',
         transformOrigin: 'center center',
       })
       .to(intro.current, {
         scale: 0.5,
         y: '-100%',
         ease: 'ease',
-        duration: 1,
       });
   });
   return (
@@ -41,12 +40,13 @@ export default function Intro() {
           className='absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center font-lobster text-white overflow-hidden '
           ref={intro}
         >
+          <span className='h-screen w-screen absolute z-30 bg-stone-800 opacity-65'></span>
           <Image
             src='/images/tree.png'
             alt='bg-tree'
             layout='fill'
             objectFit='cover'
-            className='absolute brightness-0 z-30'
+            className='absolute brightness-0 z-50'
             ref={img}
           />
           <Image
@@ -56,8 +56,9 @@ export default function Intro() {
             objectFit='cover'
             className='object-bottom z-20'
           />
-          <h1 className='z-20 text-6xl'>Nick & Karen's</h1>
-          <p className='z-20 text-3xl'>Engagment Photo's</p>
+          <h1 className='z-30 text-6xl'>Nick & Karen's</h1>
+          <p className='z-30 text-3xl'>Engagment Photo's</p>
+          <p className='z-30 text-4xl animate-bounce mt-6'>Scroll Below</p>
         </div>
       </div>
     </>
