@@ -8,17 +8,15 @@ import getImages from '../listofimgs';
 export default function Hero() {
   return (
     <>
-      <div className='grid grid-cols-3 gap-4'>
-        {getImages().map((img: any) => {
-          return (
-            <Image
-              src={`/images/adelynsphotos/${img}`}
-              alt='photos-by-adelyn'
-              height={300}
-              width={300}
-            />
-          );
-        })}
+      <div className='grid grid-cols-3'>
+        {getImages().map((img) => (
+          <Image
+            src={`/images/adelynsphotos/${img}`}
+            alt="Adelyn's Photos"
+            width={300}
+            height={300}
+          />
+        ))}
       </div>
     </>
   );
