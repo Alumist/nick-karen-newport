@@ -1,11 +1,9 @@
-
-
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Link from 'next/link';
-import  getImages  from '../listofimgs';
+import getImages from '../listofimgs';
 
 export default function Hero() {
   return (
