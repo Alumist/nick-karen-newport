@@ -46,7 +46,7 @@ export default function Intro() {
             alt='bg-tree'
             layout='fill'
             objectFit='cover'
-            className='absolute brightness-0 z-50'
+            className='absolute brightness-0 z-50 scale-150'
             ref={img}
           />
           <Image
@@ -54,7 +54,7 @@ export default function Intro() {
             alt='bg-forest'
             layout='fill'
             objectFit='cover'
-            className='object-bottom z-20'
+            className='object-bottom z-20 '
           />
           <h1 className='z-30 text-6xl'>Nick & Karen's</h1>
           <p className='z-30 text-3xl'>Engagment Photo's</p>

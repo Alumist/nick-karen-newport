@@ -1,9 +1,10 @@
 import React from 'react';
+import { getAdelynsPhotos } from './images';
 import Hero from './hero';
 
 const ParentComponent: React.FC = () => {
   const getImages = () => {
-    return ['097A7631.jpg']
+    return [ ...getAdelynsPhotos()];
   };
 
   const images = getImages();

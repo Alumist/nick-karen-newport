@@ -14,6 +14,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ images }) => {
   const ref = useRef(null);
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from(ref.current, {
       x: -300,
       opacity: 0,
@@ -21,17 +22,19 @@ const Hero: React.FC<HeroProps> = ({ images }) => {
       ease: 'power3.out',
       scrollTrigger: {
         trigger: ref.current,
-        start: 'top bottom',
-        end: '+=100%',
-        scrub: true,
-        toggleActions: 'play none none reverse',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'restart none none none',
       },
     });
   }, [ref]);
 
   return (
     <>
-      <div className='grid grid-cols-3 justify-center items-center justify-self-center gap-4'>
+      <div
+        className='grid grid-cols-3 justify-center items-center justify-self-center gap-4'
+        ref={ref}
+      >
         {images.map((img) => (
           <Image
             key={img}
