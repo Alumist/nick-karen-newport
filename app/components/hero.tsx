@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ images }) => {
     gsap.from(ref.current, {
       x: -300,
       opacity: 0,
-      duration: 1,
+      duration: 2,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: ref.current,
