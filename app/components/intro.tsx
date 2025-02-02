@@ -46,7 +46,7 @@ export default function Intro() {
             alt='bg-tree'
             layout='fill'
             objectFit='cover'
-            className='absolute brightness-0 z-50 scale-150'
+            className='absolute brightness-0 z-50 md:scale-150 -scale-150'
             ref={img}
           />
           <Image
